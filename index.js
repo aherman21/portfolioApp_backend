@@ -44,6 +44,24 @@ let feedbacks = [
       }
   ]
 
+  let highScores = [
+    {
+      "nickName": "asdads",
+      "score": 1,
+      "id": 1
+    },
+    {
+      "nickName": "testi",
+      "score": 3,
+      "id": 2
+    },
+    {
+      "nickName": "testi2",
+      "score": 2,
+      "id": 3
+    }
+]
+
 app.get('/', (req, res) => {
     res.send('<h1>Hello World!</h1>')
 })
@@ -72,6 +90,16 @@ app.post('/api/feedbacks', (req, res) => {
     const feedback = req.body
     console.log(feedback)
     res.json(feedback)
+})
+
+app.get('/api/highScores', (req, res) => {
+    res.json(highScores)
+})
+
+app.post('/api/highScores', (req, res) => {
+    const highScore = req.body
+    console.log(highScore)
+    res.json(highScore)
 })
 
 const PORT = process.env.PORT || 3002
