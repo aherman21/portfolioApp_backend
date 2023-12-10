@@ -1,7 +1,7 @@
-POST http://localhost:3002/api/notes
-Content-Type: application/json
+POST http://localhost:3002/api/feedbacks
 
 {
-  "content": "Vscode restcliest is cool",
-  "important": true
+    "message": "This is a test message",
+    "name": "Test Name",
+    "isPublic": true
 }
